@@ -1,0 +1,36 @@
+.overall-task-picker {
+    margin-left: 25vw;
+    .start-a-task {
+      padding: 5px 0px;
+      color: $grey;
+      font-size: 0.95rem;
+    }
+    .overall-task-list {
+      width: 25vw;
+      .overall-task-li {
+        @include listItemStyle;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        transition: .2s;
+
+
+        .overall-task-item {
+          // margin: 0px 5px;
+        }
+        .overall-task-prog {
+          font-size: 0.7rem;
+          color: $grey;
+          margin: 0px 5px;
+        }
+        &:hover {
+          cursor: pointer;
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
+
+  .itscompleted{
+    font-size: .8rem;
+  }

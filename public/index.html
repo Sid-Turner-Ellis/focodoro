@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focodoro</title>
+</head>
+
+<body>
+  <div class="loader" style="display: none;"></div>
+  <div class="loader second-loader" style="display: none;"></div>
+  <header>
+    <h1>FocoDoro</h1>
+    <p>No multi-tasking, Pure focus</p>
+  </header>
+  <main>
+    <div class=" form-wrapper">
+      <!-- form 1 -->
+      <div class="form first-form">
+        <div class="input-contain">
+          <input type="text" class="overall-input" placeholder="Choose your focus" />
+        </div>
+        <img class="tick" src="images/tick.svg" alt="" />
+      </div>
+      <!-- form 2 -->
+      <div class="form">
+        <img class="left-arrow" src="images/left.svg" alt="" />
+
+        <div class="input-contain">
+          <input type="text" class="ind-input" placeholder="Break it down" />
+        </div>
+        <img class="right-arrow" src="images/right.svg" alt="" />
+        <!-- <img class="second-tick" src="images/tick.svg" alt="" /> -->
+        <p class="submit-pomo">Finished</p>
+      </div>
+      <!-- forms end -->
+    </div>
+    <!-- Actual list -->
+    <ul class="temp-list"></ul>
+    <div style="display: none;" class="overall-task-picker">
+      <p class="start-a-task">Start a task</p>
+      <ul class="overall-task-list"></ul>
+    </div>
+  </main>
+  <!-- The clock modal -->
+  <div style="display: none ;" class="modal-back">
+    <div class="clock-back">
+      <div class="clock-section">
+        <div class="clock-section-top">
+          <h3 class="clock-task-name">focodoro</h3>
+          <p class="info">i</p>
+        </div>
+
+        <h1 class="clock">25:00</h1>
+        <div class="clock-control">
+          <div class="stop">
+            <h3 class="stop">Stop</h3>
+          </div>
+          <div class="start">
+            <h3 class="start">Start</h3>
+          </div>
+        </div>
+
+      </div>
+      <div class="clock-descr-container">
+        <p class="current-focus-p">Your current focus</p>
+        <div class="focus-flex-wrap">
+          <ul class="focus-h2">
+            <!-- <li class=focus-li>
+              <h2 class="current-focus">tetboi bitach</h3>
+            </li>
+            <li class=focus-li>
+              <h2 class="current-focus">tetboi bissstach</h3>
+            </li> -->
+          </ul>
+          <!-- <img src="/images/right.svg" alt=""> -->
+          <img src="/images/tick.svg" alt="">
+
+
+
+        </div>
+        <div class="clock-options">
+          <p class="skip">Save for later</p>
+          <p class="delete">Delete task</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="javascripts/main.js"></script>
+<script src="javascripts/clock.js"></script>
+
+</html>

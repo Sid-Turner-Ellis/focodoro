@@ -1,0 +1,82 @@
+input {
+  transition: 0.5s;
+}
+.temp-list {
+  width: 30vw;
+  margin: auto;
+  list-style: none;
+  text-align: center;
+  margin-top: 25px;
+  // margin-left: 25vw;
+}
+
+.temp-li {
+  @include listItemStyle;
+  display: flex;
+
+  .item {
+    flex-basis: 80%;
+  }
+  .delete {
+    font-size: 1.2rem;
+    color: rgb(192, 101, 101);
+    cursor: pointer;
+    flex-basis: 20%;
+    transition: 0.2s;
+    &:hover {
+      transform: rotate(180deg) scale(1.5);
+    }
+  }
+}
+
+//list item transitions (adding them)
+.enterLiLe {
+  animation: enterLiLe 1s forwards;
+}
+.enterLiRi {
+  animation: enterLiRi 1s forwards;
+}
+
+@keyframes enterLiLe {
+  from {
+    transform: translateX(-1200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes enterLiRi {
+  from {
+    transform: translateX(1200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+//Animations for deleting the items
+.enterLiLeRev {
+  animation: enterLiLeRev 1s;
+  position: relative;
+}
+.enterLiRiRev {
+  animation: enterLiRiRev 1s;
+  position: relative;
+}
+@keyframes enterLiLeRev {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-1200px);
+  }
+}
+@keyframes enterLiRiRev {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(1200px);
+  }
+}
